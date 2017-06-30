@@ -67,11 +67,11 @@
 % hspace{-1px} and add an additional pixel-or-two wide beamercolorbox.	
 
 \hbox{%
-\begin{beamercolorbox}[wd=.4\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm, rightskip=.3cm plus1fil]{author in head/foot}%
+\begin{beamercolorbox}[wd=.3\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm, rightskip=.3cm plus1fil]{author in head/foot}%
 	\usebeamerfont{author in head/foot}\insertshortauthor  \end{beamercolorbox}%
 %
-\begin{beamercolorbox}[wd=.6\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
-    \usebeamerfont{title in head/foot}{\textit \insertshorttitle}%
+\begin{beamercolorbox}[wd=.7\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+    \usebeamerfont{title in head/foot}{\textit {\insertshorttitle \ifx\insertsectionhead\@empty\else {\quad $\triangleright$ \quad \insertsectionhead} \fi}}%
     \hskip2ex plus1fill%
 		% \insertpagenumber\,/\,\insertpresentationendpage %% Want FRAME, not SLIDE number
 		\insertframenumber/\inserttotalframenumber
@@ -113,7 +113,7 @@
 
 \vbox{}\vskip-3.5ex%
 %
-\begin{beamercolorbox}[sep=0.3cm,#1,wd=\the\@tempdima]{titlelike}
+\begin{beamercolorbox}[sep=0.8cm,#1,wd=\the\@tempdima]{titlelike}
 	\usebeamerfont{frametitle}%
 	\vbox{}\vskip-1ex%
 	\if@tempswa\else\csname beamer@fte#1\endcsname\fi%
@@ -129,7 +129,7 @@
  	}%
 	%
   	\vskip-1ex%
-  	\if@tempswa\else\vskip-.3cm\fi% set inside beamercolorbox... evil here...
+  	\if@tempswa\else\vskip-0.8cm\fi% set inside beamercolorbox... evil here...
 \end{beamercolorbox}%
 %%
 

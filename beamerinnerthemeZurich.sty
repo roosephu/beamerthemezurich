@@ -45,13 +45,13 @@
     \end{beamercolorbox}%
     \vskip1em\par
     \begin{beamercolorbox}[sep=8pt,center,#1]{author}
-      \usebeamerfont{author}\insertauthor
+    {\sc \usebeamerfont{author}\insertauthor}
     \end{beamercolorbox}
     \begin{beamercolorbox}[sep=8pt,center,#1]{institute}
       \usebeamerfont{institute}\insertinstitute
     \end{beamercolorbox}
     \begin{beamercolorbox}[sep=8pt,center,#1]{date}
-      \usebeamerfont{date}\insertdate
+        {\usebeamerfont{date}\it \insertdate}
     \end{beamercolorbox}\vskip0.5em
     {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
   \end{centering}
